@@ -1,7 +1,7 @@
 #!/bin/bash
 
 getProjects () {
-	curl --header "PRIVATE-TOKEN: $token" "https://$hostDomain/api/v4/groups/$groupIdOfIS/projects?simple=1&archived=0&per_page=$perPage&order_by=id&page=$page"
+	curl --header "PRIVATE-TOKEN: $token" "https://$hostDomain/api/v4/groups/$groupId/projects?simple=1&archived=0&per_page=$perPage&order_by=id&page=$page"
 }
 
 getFile () {
@@ -52,7 +52,7 @@ token="$ACCESS_TOKEN"
 # git lab host
 hostDomain="$GITLAB_HOST"
 # group id
-groupIdOfIS="$GROUP_ID"
+groupId="$GROUP_ID"
 
 # intial page valude
 page=1
